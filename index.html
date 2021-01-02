@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Aritra Basu</title>
+</head>
+<body>
+    <div class="container-fluid bg-grad-1">
+       <div class="col-11" style="margin:0px auto">
+           <div class="row">
+           <div class="col-lg-7 welcome--box">
+               <h1>Welcome Buddy !</h1>
+               <p>to your brand new digital store of RC RCCIIT</p>
+           </div>
+           <div class="col-lg-5 welcome--box--social-media">
+            <ul class="welcome--box--social-media-list">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+           </div>
+           </div>
+        </div>
+        <div clss="row">
+        <div class="col-11 stall--img mt-4" style="background-image: url(img/stall.jpg);">
+           <div class="about--shop">
+               <div class="container-fluid">
+                   <div class="row">
+                       <div class="col-7">
+                        <h1>Rc RCCIIT</h1>
+                        <h2> Shop No  - 30 </h2>
+                        <h3>+91 6291080552</h3>
+                       </div>
+                       <div class="col-5 d-flex align-items-center justify-content-center">
+                           <img src="img/logo.png" class="img-fluid">
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+       </div>
+    </div>
+    <div class="container-fluid mt-5">
+        <div class="col-11 menu">
+            <div class="container">
+                <div class="row">
+            <h1>Food of the Day</h1>
+        </div>
+    </div>
+    </div>
+    <div class="col-11 menu-list">
+        <div class="container">
+            <div class="row item-holder">
+                <div class="col-7">
+                    <img src="img/food1.png" class="img-fluid item-image">
+                </div>
+                <div class="col-8 item-name">
+                    Blue Rice
+                    <p> Free Chilli Chicken </p>
+                </div>
+                <div class="col-4 item-price">Rs 35</div>
+                <div class="col-12">      
+                  <button class="add-item" id="1">
+                      <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+            </div>
+            <div class="row  item-holder">
+                <div class="col-7">
+                    <img src="img/food1.png" class="img-fluid item-image">
+                </div>
+                <div class="col-8 item-name">Red Tacco
+                    <p> Buy 3 to get 3 Dip Free </p>
+                </div>
+                <div class="col-4 item-price">Rs 10</div>
+                <div class="col-12">      
+                    <button class="add-item" id="2">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+            </div>
+            <div class="row  item-holder">
+                <div class="col-7">
+                    <img src="img/food2.png" class="img-fluid item-image">
+                </div>
+                <div class="col-8 item-name">Yellow Firni</div>
+                <div class="col-4 item-price">Rs 30</div>
+                <div class="col-12">      
+                    <button class="add-item" id="3">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-11" style="margin: 0px auto;">
+                <a href="safety.html"><div class="check-sanitization">
+                    Check our Safety Measures
+                    <i class="fa fa-angle-right"></i>
+                </div></a>
+            </div>
+        </div>
+    </div>
+    <div class="shoping-basket">
+        <i class="fa fa-shopping-bag"></i>
+        <span class="badge badge-info">0</span>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        var cart = [];
+        $('.add-item').on('click', function(e, manual) {
+        if (typeof manual === 'undefined' || manual === false) {
+            $('.add-item').not(this).trigger('click', true);
+            cart.push($(this).attr('id'));
+            $('.badge').text(cart.length);
+        }
+        });
+    </script>
+</body>
+</html>

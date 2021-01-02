@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500&display=swap');
+@font-face {
+    font-family: 'KG HAPPY Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('KG HAPPY Regular'), url('../KGHAPPY.woff') format('woff');
+}
+*
+{
+    margin:0px;
+}
+body,html
+{
+    margin:0px;
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+a
+{
+    color:inherit !important;
+}
+.bg-1
+{
+    background-color: #FFDC02;
+}
+.bg-grad-1
+{
+    background-image: linear-gradient(to bottom, #ffdc02 80%, #fff 80%);
+}
+.stall--img
+{
+    height:400px;
+    width:90%;
+    margin:0px auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px #000;
+    background-size:cover ;
+    position: relative;
+}
+.about--shop
+{
+    background-color: #fff;
+    width: 94%;
+    padding:20px 10px;
+    border-radius:20px;
+    position: absolute;
+    bottom:20px;
+
+}
+.about--shop h1
+{
+    font-size:20px;
+    font-weight:900;
+}
+.about--shop h2
+{
+    font-size:14px;
+    font-weight:600;
+}
+.about--shop h3
+{
+    font-size:14px;
+    font-weight:500;
+}
+.welcome--box
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.welcome--box h1
+{
+    padding-top: 40px;
+    font-size:20px;
+    font-weight:800;
+}
+.welcome--box p
+{
+    font-size: 12px;
+    font-weight:500;
+}
+.welcome--box--social-media-list li
+{
+    list-style: none;
+    font-size:20px;
+    height:35px;
+    width:35px;
+    background-color: #fff;
+    text-align: center;
+    line-height:35px;
+    margin:5px;
+    border-radius: 20px;
+}
+.welcome--box--social-media-list
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0px;
+}
+.welcome--box--social-media
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu h1
+{
+
+    font-family:'KG HAPPY Regular';
+    font-weight:normal;
+    font-size:50px;
+    text-align:center;
+    line-height: 60px;
+}
+.menu
+{
+    background-color: #ddd;
+    margin:0px auto;
+    background: #9B9B9B;
+background: linear-gradient(to top, #ddd 53%, rgba(0,0,0,0) 53%);
+}
+.menu-list
+{
+    margin:0px auto;
+    background-color: #ddd;
+    padding:20px 
+}
+.item-holder
+{
+    margin:40px 0px;
+    background-color: #FFDC02;
+    padding:10px 20px;
+}
+.item-image
+{
+    margin-top:-50px;
+}
+.item-name
+{
+    font-weight:bold;
+    font-size:20px;
+}
+.item-price
+{
+    font-weight:bold;
+    font-size:14px;
+}
+.item-name p
+{
+    font-weight: 300;
+    font-size: 13px;
+}
+.add-item
+{
+    border-radius: 30px;
+    margin:10px 0px;
+    right:0;
+    top:-15px;
+    position: absolute;
+    background-color: #fff;
+}
+.shoping-basket
+{
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+    z-index:9999;
+    background-color: #000;
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    color:#fff;
+    text-align: center;
+    line-height: 50px;
+}
+.shoping-basket .badge
+{
+    
+    position: absolute;
+}
+.check-sanitization
+{
+    font-family:'KG HAPPY Regular';
+    font-weight:normal;
+    font-size:30px;
+    border: solid black;
+    border-color: black;
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-2deg);
+    margin:20px 0px;
+    padding:10px;
+    text-align: center;
+}
