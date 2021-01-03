@@ -72,12 +72,12 @@
             </div>
             <div class="row  item-holder">
                 <div class="col-7">
-                    <img src="img/food1.png" class="img-fluid item-image">
+                    <img src="img/food3.png" class="img-fluid item-image">
                 </div>
                 <div class="col-8 item-name">Red Tacco
                     <p> Buy 3 to get 3 Dip Free </p>
                 </div>
-                <div class="col-4 item-price">Rs 10</div>
+                <div class="col-4 item-price">Rs 15</div>
                 <div class="col-12">      
                     <button class="add-item" id="2">
                         <i class="fa fa-plus"></i>
@@ -197,10 +197,12 @@
                     $(".modal-body").append("<li class='cart-item'>Yellow Firni <br>"+cart[3]+" Plate - RS."+cart[3]*30+"</li>");
                     total=total+cart[3]*30;
                 }
-                $(".modal-body").append("<li class='cart-item'>Total- Rs. "+total+"</li>");
+                $(".modal-body").append("<li class='cart-total'>Total- Rs. "+total+"</li>");
                 if(total>0)
                 {
-                    $(".modal-body").append("<img src='img/pay.jpeg' class='img-fluid'> ");
+                    $(".modal-body").append("<br><br><img src='img/pay.jpeg' class='img-fluid'><br><form action='https://formspree.io/f/xleooykl' method ='POST'> <input type='text' class='form-control' Placeholder='name' name='name'><input type='text' class='form-control' Placeholder='Shop No' name='shop no'><input type='hidden' name='order' value="+cart+"><button  type='submit' class='btn w-100 text-light'>Place Order </button></form>");
+
+                    
                 }
 
             }
