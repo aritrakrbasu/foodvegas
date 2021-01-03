@@ -116,16 +116,22 @@ a
 }
 .menu
 {
-    background-color: #ddd;
     margin:0px auto;
-    background: #9B9B9B;
-background: linear-gradient(to top, #ddd 53%, rgba(0,0,0,0) 53%);
+    border: solid black;
+    border-color: black;
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    z-index:9999
 }
+
 .menu-list
 {
     margin:0px auto;
     background-color: #ddd;
-    padding:20px 
+    padding:20px ;
+    margin-top:-70px;
+    padding-top:70px;
+
 }
 .item-holder
 {
@@ -193,4 +199,22 @@ background: linear-gradient(to top, #ddd 53%, rgba(0,0,0,0) 53%);
     margin:20px 0px;
     padding:10px;
     text-align: center;
+}
+
+.cart
+{
+    border: solid black !important;
+    border-color: black !important;
+    border-width: 3px 3px 5px 5px !important;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5% !important;
+    background-color: #000 !important;
+}
+.cart-item
+{
+    list-style: none;
+    border-bottom: 1px dashed #fff;
+}
+.cart-item:last-child
+{
+    border-bottom: 0px;
 }

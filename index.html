@@ -108,10 +108,21 @@
             </div>
         </div>
     </div>
-    <div class="shoping-basket">
+    <a href="javascript:void(0)"  data-toggle="modal" data-target="#exampleModalCenter" id="shoppingbag"><div class="shoping-basket">
         <i class="fa fa-shopping-bag"></i>
         <span class="badge badge-info">0</span>
+    </div></a>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+      <div class="modal-content cart">
+        <div class="modal-body text-light ">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </div>
+
+      </div>
     </div>
+  </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js'></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -120,10 +131,83 @@
         $('.add-item').on('click', function(e, manual) {
         if (typeof manual === 'undefined' || manual === false) {
             $('.add-item').not(this).trigger('click', true);
-            cart.push($(this).attr('id'));
-            $('.badge').text(cart.length);
+            if($(this).attr('id')==1)
+            {
+                if (cart[1] != null) 
+                {
+                    cart[1]=cart[1]+1;
+                }else
+                {
+                    cart[1]=1;
+                }  
+            }
+            if($(this).attr('id')==2)
+            {
+                if (cart[2] != null) 
+                {
+                    cart[2]=cart[2]+1;
+                }else
+                {
+                    cart[2]=1;
+                }  
+            }
+            if($(this).attr('id')==3)
+            {
+                if (cart[3] != null) 
+                {
+                    cart[3]=cart[3]+1;
+                }else
+                {
+                    cart[3]=1;
+                }  
+            }
+            var itemno = 0
+            if(cart[1]!=null)
+                itemno++;
+            if(cart[2]!=null)
+                itemno++;
+            if(cart[3]!=null)
+                itemno++;
+            $('.badge').text(itemno);
         }
         });
+
+        $("#shoppingbag").on('click',function(){
+            if(cart.length==0)
+            {
+                $(".modal-body").text("No Cart Item")
+            }else
+            {
+                $(".modal-body").html("");
+                var total=0;
+                if(cart[1]!=null)
+                {
+                    
+                    $(".modal-body").append("<li class='cart-item'> Blue Rice + Chilli chicken <br>"+cart[1]+" Plate - RS."+cart[1]*35+"</li>");
+                    total=total+cart[1]*35;
+                }
+
+                if(cart[2]!=null)
+                {
+                    $(".modal-body").append("<li class='cart-item'> Red Tacco <br>"+cart[2]+" Pc - RS."+cart[2]*15+"</li>");
+                    total=total+cart[2]*15;
+                }
+                if(cart[3]!=null)
+                {
+                    $(".modal-body").append("<li class='cart-item'>Yellow Firni <br>"+cart[3]+" Plate - RS."+cart[3]*30+"</li>");
+                    total=total+cart[3]*30;
+                }
+                $(".modal-body").append("<li class='cart-item'>Total- Rs. "+total+"</li>");
+                if(total>0)
+                {
+                    $(".modal-body").append("<img src='img/pay.jpeg' class='img-fluid'> ");
+                }
+
+            }
+
+        })
+        
+        
     </script>
 </body>
 </html>
